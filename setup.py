@@ -27,20 +27,20 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_product_price_list_category',
+setup(name='trytonzz_product_price_list_category',
     version=info.get('version', '0.0.1'),
     description='Tryton module to add category option in product price list',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-product_price_list_category",
-    package_dir={'trytond.modules.product_price_list_category': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytonzz-product_price_list_category",
+    package_dir={'trytonzz.modules.product_price_list_category': '.'},
     packages=[
-        'trytond.modules.product_price_list_category',
-        'trytond.modules.product_price_list_category.tests',
+        'trytonzz.modules.product_price_list_category',
+        'trytonzz.modules.product_price_list_category.tests',
     ],
     package_data={
-        'trytond.modules.product_price_list_category': info.get('xml', []) \
+        'trytonzz.modules.product_price_list_category': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytond_product_price_list_category',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytond.modules]
-    product_price_list_category = trytond.modules.product_price_list_category
+    [trytonzz.modules]
+    product_price_list_category = trytonzz.modules.product_price_list_category
     """,
     test_suite='tests',
-    test_loader='trytond.test_loader:Loader',
+    test_loader='trytonzz.test_loader:Loader',
 )
