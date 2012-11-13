@@ -33,14 +33,14 @@ setup(name='trytonzz_product_price_list_category',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytonzz-product_price_list_category",
-    package_dir={'trytonzz.modules.product_price_list_category': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytond-product_price_list_category",
+    package_dir={'trytond.modules.product_price_list_category': '.'},
     packages=[
-        'trytonzz.modules.product_price_list_category',
-        'trytonzz.modules.product_price_list_category.tests',
+        'trytond.modules.product_price_list_category',
+        'trytond.modules.product_price_list_category.tests',
     ],
     package_data={
-        'trytonzz.modules.product_price_list_category': info.get('xml', []) \
+        'trytond.modules.product_price_list_category': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
     },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytonzz_product_price_list_category',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytonzz.modules]
-    product_price_list_category = trytonzz.modules.product_price_list_category
+    [trytond.modules]
+    product_price_list_category = trytond.modules.product_price_list_category
     """,
     test_suite='tests',
-    test_loader='trytonzz.test_loader:Loader',
+    test_loader='trytond.test_loader:Loader',
 )
