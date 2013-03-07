@@ -17,8 +17,8 @@ Este módulo puede filtrar las lineas de la tarifa por:
 * Cantidad
 * Categoría
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
