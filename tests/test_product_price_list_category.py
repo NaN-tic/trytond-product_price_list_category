@@ -18,7 +18,7 @@ from trytond.transaction import Transaction
 
 class ProductPriceListCategoryTestCase(unittest.TestCase):
     '''
-    Test Helloword module.
+    Test Product PriceList Category module.
     '''
 
     def setUp(self):
