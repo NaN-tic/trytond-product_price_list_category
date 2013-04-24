@@ -16,16 +16,3 @@ Este módulo puede filtrar las lineas de la tarifa por:
 * Producto
 * Cantidad
 * Categoría
-
-Dependencias
-------------
-
-* Compañía_
-* Producto_
-* Tarifas_
-* Terceros_
-
-.. _Compañía: ../company/index.html
-.. _Producto: ../product/index.html
-.. _Tarifas: ../product_price_list/index.html
-.. _Terceros: ../party/index.html
