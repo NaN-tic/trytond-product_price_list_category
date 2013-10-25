@@ -3,3 +3,5 @@
 #the full copyright notices and license terms.
 
 from .test_product_price_list_category import suite
+
+__all__ = ['suite']
