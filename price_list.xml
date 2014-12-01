@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<!-- This file is part product_price_list_category module for Tryton.
-The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<!-- This file is part of product_price_list_category module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
 <tryton>
     <data>
         <record model="ir.ui.view" id="price_list_line_view_form">
