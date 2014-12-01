@@ -1,7 +1,7 @@
-trytond_product_price_list_category
+trytond-product_price_list_category
 ===================================
 
-The product_price_list_category module of the Tryton application platform.
+The product price list category module of the Tryton application platform.
 
 Installing
 ----------
