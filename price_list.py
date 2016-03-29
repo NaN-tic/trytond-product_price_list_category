@@ -5,10 +5,10 @@ from trytond.model import fields
 from trytond.pool import PoolMeta
 
 __all__ = ['PriceList', 'PriceListLine']
-__metaclass__ = PoolMeta
 
 
 class PriceList:
+    __metaclass__ = PoolMeta
     __name__ = 'product.price_list'
 
     def compute(self, party, product, unit_price, quantity, uom,
@@ -22,5 +22,6 @@ class PriceList:
 
 
 class PriceListLine:
+    __metaclass__ = PoolMeta
     __name__ = 'product.price_list.line'
     category = fields.Many2One('product.category', 'Category')
