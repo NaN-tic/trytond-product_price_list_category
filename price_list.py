@@ -16,7 +16,10 @@ class PriceList:
         if pattern is None:
             pattern = {}
         if product:
-            pattern['category'] = product.category and product.category.id or None
+            if hasattr(product, 'categories'):
+                pattern['categories'] = [c.id for c in product.categories]
+            else:
+                pattern['category'] = product.category and product.category.id or None
         return super(PriceList, self).compute(party, product, unit_price,
             quantity, uom, pattern)
 
@@ -24,3 +27,11 @@ class PriceList:
 class PriceListLine:
     __name__ = 'product.price_list.line'
     category = fields.Many2One('product.category', 'Category')
+
+    def match(self, pattern):
+        if 'categories' in pattern:
+            pattern = pattern.copy()
+            categories = pattern.pop('categories')
+            if self.category and self.category.id not in categories:
+                return False
+        return super(PriceListLine, self).match(pattern)
