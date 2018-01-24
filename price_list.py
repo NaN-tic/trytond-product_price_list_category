@@ -16,7 +16,10 @@ class PriceList:
         if pattern is None:
             pattern = {}
         if product:
-            pattern['categories'] = [c.id for c in product.categories]
+            if hasattr(product, 'categories'):
+                pattern['categories'] = [c.id for c in product.categories]
+            else:
+                pattern['category'] = product.category and product.category.id or None
         return super(PriceList, self).compute(party, product, unit_price,
             quantity, uom, pattern)
 
